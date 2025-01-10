@@ -6,6 +6,9 @@ require('dotenv').config();
 
 const app = express();
 
+const http = require('http');
+const server = http.createServer(app);
+
 // Middleware
 app.use(cors({
     origin: 'http://localhost:5173', // Allow only your frontend origin
